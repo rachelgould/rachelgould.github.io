@@ -1,0 +1,85 @@
+@import 'border-box.css';
+@import 'normalize.css';
+
+// FONTS
+
+$font-primary: 'Oswald', sans-serif;
+$font-secondary: 'Quattrocento Sans', sans-serif;
+
+// COLORS
+
+$color-light: #F8FAF7;
+$color-dark: #191716;
+$color-accent-vivid: #DBD97D;
+$color-accent-dull: #5F5D69;
+$color-accent-bright: #ADAABF;
+$color-bg-bright: #D2D0DC;
+
+%headings-shared {
+  font-variant: small-caps;
+  margin: 0;
+}
+
+html {
+  background-color: $color-light;
+  font-family: $font-primary;
+  color: $color-dark;
+  body {
+    margin: 0;
+  }
+  p, li {
+    font-family: $font-secondary;
+  }
+}
+
+header {
+  background-color: $color-accent-bright;
+  color: $color-dark;
+  position: fixed;
+  width: 100%;
+  top: 0px;
+  padding: 0;
+  text-align: center;
+
+  a {
+    text-decoration: none;
+    color: $color-dark;
+  }
+
+  h1 {
+    font-size: 4em;
+    margin: 0;
+    text-decoration: underline $color-accent-dull solid;
+  }
+
+  h2 {
+    @extend %headings-shared;
+  }
+
+  ul {
+    font-size: 0.8em;
+    list-style: none;
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    padding: 0;
+
+    li {
+      padding: 0em 1em;
+    }
+  }
+}
+
+main {
+  margin: 200px 3em 0 3em;
+
+  h1 {
+    font-size: 2em;
+    border-bottom: 3px solid $color-accent-vivid;
+
+  }
+
+  h2 {
+    @extend %headings-shared;
+  }
+}
