@@ -3,7 +3,6 @@ $(() => {
   mobileModifications();
 
   $(window).resize(function(event) {
-    console.log("resized!!");
     mobileModifications();
   });
 
@@ -21,7 +20,6 @@ $(() => {
 
   function mobileModifications() {
     let width = windowWidth()
-    console.log(width)
     if (width > 600) {
       navUnScrolled();
       $(window).scroll(function() {

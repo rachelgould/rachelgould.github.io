@@ -114,7 +114,7 @@ html {
       list-style: none;
       margin-right: 0.5em;
       padding: 0;
-      color: $color-accent-bright;
+      color: $color-accent-dull;
     }
   }
 
@@ -207,6 +207,7 @@ main {
     font-size: 2em;
     white-space: nowrap;
     overflow: hidden;
+    color: $color-accent-dull;
   }
 
   h1:after {
@@ -215,7 +216,7 @@ main {
     width: 100%;
     display: inline-block;
     vertical-align: middle;
-    border-bottom: 2px solid $color-accent-dull;
+    border-bottom: 2px solid $color-accent-bright;
     overflow: hidden;
     justify-content: space-around;
   }
