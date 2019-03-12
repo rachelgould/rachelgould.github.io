@@ -52,16 +52,6 @@ html {
     }
   }
 
-  h2.job-title {
-    @extend %headings-shared;
-    font-size: 2em;
-  }
-
-  h3 {
-    font-size: 0.9em;
-    margin-top: 0;
-  }
-
   ul.tech-stack {
     padding: 0;
     list-style: none;
@@ -174,6 +164,15 @@ main {
     border-bottom: 3px solid $color-accent-dull;
     overflow: hidden;
     justify-content: space-around;
+  }
+
+  h2.job-title {
+    font-size: 2em;
+  }
+
+  h3 {
+    font-size: 0.9em;
+    margin-top: 0;
   }
 
   h2 {

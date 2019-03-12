@@ -1,4 +1,4 @@
-html h2.job-title, header h2, main h2 {
+header h2, main h2 {
   font-variant: small-caps;
   margin: 0;
 }
@@ -55,15 +55,6 @@ html ul {
 
 html ul li {
   padding: 0 0 0.5em 0;
-}
-
-html h2.job-title {
-  font-size: 2em;
-}
-
-html h3 {
-  font-size: 0.9em;
-  margin-top: 0;
 }
 
 html ul.tech-stack {
@@ -190,6 +181,15 @@ main h1:after {
   overflow: hidden;
   -ms-flex-pack: distribute;
       justify-content: space-around;
+}
+
+main h2.job-title {
+  font-size: 2em;
+}
+
+main h3 {
+  font-size: 0.9em;
+  margin-top: 0;
 }
 
 main .section-projects-container h3 {
