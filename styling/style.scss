@@ -5,7 +5,7 @@ $font-secondary: 'Quattrocento Sans', sans-serif;
 
 // COLORS
 
-$color-bg-bright: #D6D3D6;
+$color-bg-bright: rgb(228, 227, 228);
 $color-dark: #191716;
 $color-accent-dull: #5F5D69;
 $color-accent-bright: #ADAABF;
@@ -15,16 +15,28 @@ $color-accent-bright: #ADAABF;
   margin: 0;
 }
 
+%three-column-flex-shared {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  div {
+    width: 30%;
+    padding-right: 2%;
+  }
+}
+
 %two-column-flex-shared {
   display: flex;
   flex-wrap: wrap;
+  justify-content: space-between;
   div {
-    width: 50%;
+    width: 45%;
+    padding-right: 2%;
   }
 }
 
 html {
-  background-color: $color-light;
+  background-color: $color-bg-bright;
   font-family: $font-primary;
   color: $color-dark;
   body {
@@ -32,6 +44,35 @@ html {
   }
   p, li {
     font-family: $font-secondary;
+  }
+  ul {
+    padding-left: 1em;
+    li {
+      padding: 0 0 0.5em 0;
+    }
+  }
+
+  h2.job-title {
+    @extend %headings-shared;
+    font-size: 2em;
+  }
+
+  h3 {
+    font-size: 0.9em;
+    margin-top: 0;
+  }
+
+  ul.tech-stack {
+    padding: 0;
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    li {
+      list-style: none;
+      margin-right: 0.5em;
+      padding: 0;
+      color: $color-accent-bright;
+    }
   }
 }
 
@@ -114,13 +155,25 @@ header.hidden {
 }
 
 main {
-  padding: 180px 3em 4em 3em;
+  padding: 180px 5em 4em 5em;
   background-color: $color-bg-bright;
 
   h1 {
     font-size: 2em;
-    border-bottom: 3px solid $color-accent-dull;
+    white-space: nowrap;
+    overflow: hidden;
+    letter-spacing: 0.1em;
+  }
 
+  h1:after {
+    content: "";
+    margin-left: 10px;
+    width: 100%;
+    display: inline-block;
+    vertical-align: middle;
+    border-bottom: 3px solid $color-accent-dull;
+    overflow: hidden;
+    justify-content: space-around;
   }
 
   h2 {
@@ -128,6 +181,20 @@ main {
   }
 
   .section-skills_skills-container {
+    @extend %three-column-flex-shared;
+  }
+
+  .section-projects-container {
+    @extend %three-column-flex-shared;
+  
+    h3 {
+      margin: 0;
+      font-size: 1em;
+    }
+  }
+
+  .section-work-exp-container {
     @extend %two-column-flex-shared;
   }
+  
 }

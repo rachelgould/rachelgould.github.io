@@ -1,10 +1,42 @@
-header h2, main h2 {
+html h2.job-title, header h2, main h2 {
   font-variant: small-caps;
   margin: 0;
 }
 
+main .section-skills_skills-container, main .section-projects-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+main .section-skills_skills-container div, main .section-projects-container div {
+  width: 30%;
+  padding-right: 2%;
+}
+
+main .section-work-exp-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+main .section-work-exp-container div {
+  width: 45%;
+  padding-right: 2%;
+}
+
 html {
-  background-color: #F8FAF7;
+  background-color: #e4e3e4;
   font-family: "Oswald", sans-serif;
   color: #191716;
 }
@@ -15,6 +47,40 @@ html body {
 
 html p, html li {
   font-family: "Quattrocento Sans", sans-serif;
+}
+
+html ul {
+  padding-left: 1em;
+}
+
+html ul li {
+  padding: 0 0 0.5em 0;
+}
+
+html h2.job-title {
+  font-size: 2em;
+}
+
+html h3 {
+  font-size: 0.9em;
+  margin-top: 0;
+}
+
+html ul.tech-stack {
+  padding: 0;
+  list-style: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+html ul.tech-stack li {
+  list-style: none;
+  margin-right: 0.5em;
+  padding: 0;
+  color: #ADAABF;
 }
 
 header {
@@ -103,24 +169,31 @@ header.hidden ul li {
 }
 
 main {
-  padding: 180px 3em 0 3em;
-  background-color: #D6D3D6;
+  padding: 180px 5em 4em 5em;
+  background-color: #e4e3e4;
 }
 
 main h1 {
   font-size: 2em;
+  white-space: nowrap;
+  overflow: hidden;
+  letter-spacing: 0.1em;
+}
+
+main h1:after {
+  content: "";
+  margin-left: 10px;
+  width: 100%;
+  display: inline-block;
+  vertical-align: middle;
   border-bottom: 3px solid #5F5D69;
+  overflow: hidden;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
 }
 
-main .section-skills_skills-container {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-}
-
-main .section-skills_skills-container div {
-  width: 50%;
+main .section-projects-container h3 {
+  margin: 0;
+  font-size: 1em;
 }
 /*# sourceMappingURL=style.css.map */
