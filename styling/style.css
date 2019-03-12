@@ -26,6 +26,9 @@
   main .section-work-exp-container div {
     width: 88%;
   }
+  #spacer {
+    padding-bottom: 40px;
+  }
 }
 
 /* Larger screens ------------------- */
@@ -58,12 +61,22 @@
     width: 45%;
     padding-right: 2%;
   }
+  #spacer {
+    padding-bottom: 120px;
+  }
 }
 
 header, header.hidden {
-  background-color: #ADAABF;
-  color: #191716;
+  background-color: #A9CBB7;
+  color: #2C363F;
   position: fixed;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   width: 100%;
   top: 0px;
   padding: 0;
@@ -79,9 +92,9 @@ header h2, main h2 {
 }
 
 html {
-  background-color: #e4e3e4;
+  background-color: #F7F7F7;
   font-family: "Oswald", sans-serif;
-  color: #191716;
+  color: #2C363F;
 }
 
 html body {
@@ -114,13 +127,13 @@ html ul.tech-stack li {
   list-style: none;
   margin-right: 0.5em;
   padding: 0;
-  color: #ADAABF;
+  color: #A9CBB7;
 }
 
 html a {
   position: relative;
   text-decoration: none;
-  color: #191716;
+  color: #2C363F;
 }
 
 html a:before {
@@ -130,7 +143,7 @@ html a:before {
   height: 1px;
   bottom: 0;
   left: 0;
-  background-color: #5F5D69;
+  background-color: #3D5A80;
   visibility: hidden;
   -webkit-transform: scaleX(0);
   transform: scaleX(0);
@@ -147,8 +160,10 @@ html a:hover:before {
 header h1 {
   font-size: 4em;
   margin: 0;
-  -webkit-text-decoration: underline #5F5D69 solid;
-          text-decoration: underline #5F5D69 solid;
+}
+
+header h2 {
+  color: #3D5A80;
 }
 
 header ul {
@@ -174,8 +189,6 @@ header ul li {
 header.hidden h1 {
   font-size: 2em;
   margin: 0;
-  -webkit-text-decoration: underline #5F5D69 solid;
-          text-decoration: underline #5F5D69 solid;
   margin-top: 10px;
 }
 
@@ -202,8 +215,8 @@ header.hidden ul li {
 }
 
 main {
-  padding: 180px 5em 4em 5em;
-  background-color: #e4e3e4;
+  padding: 5em 5em 4em 5em;
+  background-color: #F7F7F7;
 }
 
 main h1 {
@@ -218,7 +231,7 @@ main h1:after {
   width: 100%;
   display: inline-block;
   vertical-align: middle;
-  border-bottom: 3px solid #5F5D69;
+  border-bottom: 2px solid #3D5A80;
   overflow: hidden;
   -ms-flex-pack: distribute;
       justify-content: space-around;
