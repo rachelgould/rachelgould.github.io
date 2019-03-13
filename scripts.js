@@ -36,7 +36,7 @@ $(() => {
   $(window).resize(function(event) {
     mobileModifications();
   });
-
+// Modulo??
   $('#quote-next').click(function(event) {
     if (currentTestimonial === numTestimonials - 1) {
       currentTestimonial = 0;
@@ -85,7 +85,7 @@ $(() => {
     }
   }
 
-  function renderCurrentTestimonial(num) {
+  function renderCurrentTestimonial() {
     let fullTitle = testimonials[currentTestimonial].title
     let title = fullTitle.substring(0, fullTitle.indexOf("@"));
     let company = fullTitle.substring(fullTitle.indexOf('@') + 1)

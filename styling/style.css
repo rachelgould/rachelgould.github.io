@@ -87,7 +87,7 @@ header, header.hidden {
   z-index: 1000;
 }
 
-header h2, main h2, main .section-quotes-container button {
+header h2, main h2 {
   font-variant: small-caps;
   line-height: 1em;
   padding-bottom: 10px;
@@ -164,6 +164,8 @@ html a:hover:before {
 header h1 {
   font-size: 4em;
   margin: 0;
+  -webkit-transition: all .5s;
+  transition: all .5s;
 }
 
 header h2 {
@@ -194,6 +196,8 @@ header.hidden h1 {
   font-size: 2em;
   margin: 0;
   margin-top: 10px;
+  -webkit-transition: all .5s ease;
+  transition: all .5s ease;
 }
 
 header.hidden h2 {
@@ -281,35 +285,59 @@ main .section-quotes-container p {
 main .section-quotes-container button {
   font-family: "Oswald", sans-serif;
   font-weight: bold;
-  font-size: 16px;
-  padding: 12px 28px;
-  border-radius: 12px;
-  background-color: #A9CBB7;
-  -webkit-transition: background-color 0.2s ease;
-  transition: background-color 0.2s ease;
+  font-size: 24px;
+  padding: 30px 40px 40px 40px;
   max-height: 40px;
   text-align: center;
-  line-height: 10px;
+  background-color: transparent;
+  border: none;
+  overflow: hidden;
 }
 
 main .section-quotes-container button:hover {
-  background-color: #8fab9b;
+  cursor: pointer;
 }
 
 main .section-quotes-container .section-quotes-bottom {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 main .section-quotes-container .section-quotes-bottom div {
-  max-width: 80%;
+  max-width: 60%;
 }
 
 main .section-quotes-container .section-quotes-person {
   margin: 0 0.5em;
+}
+
+main .section-quotes-container #quote-next::after {
+  content: ">";
+  position: absolute;
+  -webkit-transition: all .3s ease-in;
+  transition: all .3s ease-in;
+  margin-bottom: 10px;
+}
+
+main .section-quotes-container #quote-next:hover::after {
+  -webkit-transform: translate(10px, 0);
+          transform: translate(10px, 0);
+}
+
+main .section-quotes-container #quote-back::before {
+  content: "<";
+  position: absolute;
+  -webkit-transition: all .3s ease-in;
+  transition: all .3s ease-in;
+  margin-bottom: 10px;
+}
+
+main .section-quotes-container #quote-back:hover::before {
+  -webkit-transform: translate(-10px, 0);
+          transform: translate(-10px, 0);
 }
 /*# sourceMappingURL=style.css.map */
