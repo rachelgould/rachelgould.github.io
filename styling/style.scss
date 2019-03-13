@@ -104,6 +104,30 @@ $color-accent-bright: #A9CBB7;
   #mobile-buttons {
     display: none;
   }
+
+  .section-projects-container {
+    div {
+      display: flex;
+      flex-direction: column;
+    }
+    .tech-stack {
+      padding-top: 20px;
+      margin-top: auto;
+    }
+  }
+
+  .section-work-exp-container {
+    div {
+      display: flex;
+      flex-direction: column;
+    }
+    p {
+      margin-bottom: 0;
+    }
+    .tech-stack {
+      margin-top: auto;
+    }
+  }
 }
 
 
