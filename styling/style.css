@@ -1,5 +1,5 @@
 /* Smaller screens ------------------- */
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 800px) {
   main .section-skills_skills-container, main .section-projects-container {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -32,10 +32,42 @@
   * {
     word-wrap: word-break;
   }
+  main {
+    padding: 5em 1.5em 4em 1.5em;
+  }
+  .section-quotes-container {
+    height: inherit;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  .section-quotes-container button {
+    display: none;
+  }
+  #mobile-buttons {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: end;
+        -ms-flex-align: end;
+            align-items: flex-end;
+  }
+  #mobile-buttons button {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  #mobile-buttons h4 {
+    position: relative;
+    top: 15px;
+  }
 }
 
 /* Larger screens ------------------- */
-@media only screen and (min-width: 601px) {
+@media only screen and (min-width: 801px) {
   main .section-skills_skills-container, main .section-projects-container {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -66,6 +98,17 @@
   }
   #spacer {
     padding-bottom: 120px;
+  }
+  main {
+    padding: 5em 4em 4em 4em;
+    margin: 0 auto;
+    max-width: 850px;
+  }
+  #quote-content {
+    height: 150px;
+  }
+  #mobile-buttons {
+    display: none;
   }
 }
 
@@ -223,7 +266,6 @@ header.hidden ul li {
 }
 
 main {
-  padding: 5em 1.5em 4em 1.5em;
   background-color: #F7F7F7;
 }
 
@@ -260,10 +302,6 @@ main .section-projects-container h3 {
   font-size: 1em;
 }
 
-main .section-quotes-container {
-  text-align: center;
-}
-
 main .section-quotes-container h3 {
   font-family: "Quattrocento Sans", sans-serif;
   font-size: 100%;
@@ -272,6 +310,9 @@ main .section-quotes-container h3 {
 
 main .section-quotes-container article {
   margin: 0 1em;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
 }
 
 main .section-quotes-container p {
@@ -280,22 +321,6 @@ main .section-quotes-container p {
   letter-spacing: 120%;
   color: #3D5A80;
   margin-bottom: 5px;
-}
-
-main .section-quotes-container button {
-  font-family: "Oswald", sans-serif;
-  font-weight: bold;
-  font-size: 24px;
-  padding: 30px 40px 40px 40px;
-  max-height: 40px;
-  text-align: center;
-  background-color: transparent;
-  border: none;
-  overflow: hidden;
-}
-
-main .section-quotes-container button:hover {
-  cursor: pointer;
 }
 
 main .section-quotes-container .section-quotes-bottom {
@@ -313,9 +338,25 @@ main .section-quotes-container .section-quotes-bottom div {
 
 main .section-quotes-container .section-quotes-person {
   margin: 0 0.5em;
+  text-align: right;
 }
 
-main .section-quotes-container #quote-next::after {
+main button {
+  font-family: "Oswald", sans-serif;
+  font-weight: bold;
+  padding: 30px 40px 40px 40px;
+  font-size: 150%;
+  text-align: center;
+  background-color: transparent;
+  border: none;
+  margin: 0 10px;
+}
+
+main button:hover {
+  cursor: pointer;
+}
+
+main .quote-next::after {
   content: ">";
   position: absolute;
   -webkit-transition: all .3s ease-in;
@@ -323,12 +364,12 @@ main .section-quotes-container #quote-next::after {
   margin-bottom: 10px;
 }
 
-main .section-quotes-container #quote-next:hover::after {
+main .quote-next:hover::after {
   -webkit-transform: translate(10px, 0);
           transform: translate(10px, 0);
 }
 
-main .section-quotes-container #quote-back::before {
+main .quote-back::before {
   content: "<";
   position: absolute;
   -webkit-transition: all .3s ease-in;
@@ -336,7 +377,7 @@ main .section-quotes-container #quote-back::before {
   margin-bottom: 10px;
 }
 
-main .section-quotes-container #quote-back:hover::before {
+main .quote-back:hover::before {
   -webkit-transform: translate(-10px, 0);
           transform: translate(-10px, 0);
 }

@@ -36,8 +36,8 @@ $(() => {
   $(window).resize(function(event) {
     mobileModifications();
   });
-// Modulo??
-  $('#quote-next').click(function(event) {
+
+  $('.quote-next').click(function(event) {
     if (currentTestimonial === numTestimonials - 1) {
       currentTestimonial = 0;
     } else {
@@ -47,7 +47,7 @@ $(() => {
     return currentTestimonial;
   });
 
-  $('#quote-back').click(function(event) {
+  $('.quote-back').click(function(event) {
     if (currentTestimonial === 0) {
       currentTestimonial = numTestimonials - 1;
     } else {
@@ -71,7 +71,7 @@ $(() => {
 
   function mobileModifications() {
     let width = windowWidth()
-    if (width > 600) {
+    if (width > 800) {
       navUnScrolled();
       $(window).scroll(function() {
         if($(window).scrollTop() > 400) {
@@ -92,7 +92,7 @@ $(() => {
     $('#quote-content').empty().html(testimonials[currentTestimonial].quote);
     $('#quote-person').empty().html(testimonials[currentTestimonial].person);
     $('#quote-title').empty().html(
-      `${title} <br /> ${company}`
+      `${title}<br />${company}`
     );
   }
 });

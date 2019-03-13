@@ -11,7 +11,7 @@ $color-accent-dull: #3D5A80;
 $color-accent-bright: #A9CBB7;
 
 /* Smaller screens ------------------- */
-@media only screen and (max-width : 600px) {
+@media only screen and (max-width : 800px) {
   %three-column-flex-shared {
     display: flex;
     flex-wrap: wrap;
@@ -37,10 +37,36 @@ $color-accent-bright: #A9CBB7;
   * {
     word-wrap: word-break;
   }
+
+  main {
+    padding: 5em 1.5em 4em 1.5em;
+  }
+
+  .section-quotes-container {
+    height: inherit;
+    display: flex;
+
+    button {
+      display: none;
+    }
+
+  }
+  #mobile-buttons {
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    button {
+      display: flex;
+    }
+    h4 {
+      position: relative;
+      top: 15px;
+    }
+  }
 } 
 
 /* Larger screens ------------------- */
-@media only screen and (min-width : 601px) {
+@media only screen and (min-width : 801px) {
   %three-column-flex-shared {
     display: flex;
     flex-wrap: wrap;
@@ -64,6 +90,20 @@ $color-accent-bright: #A9CBB7;
   #spacer {
     padding-bottom: 120px;
   }
+
+  main {
+    padding: 5em 4em 4em 4em;
+    margin: 0 auto;
+    max-width: 850px;
+  }
+
+  #quote-content {
+    height: 150px;
+  }
+
+  #mobile-buttons {
+    display: none;
+  }
 }
 
 
@@ -85,6 +125,10 @@ $color-accent-bright: #A9CBB7;
   line-height: 1em;
   padding-bottom: 10px;
   margin: 0;
+}
+
+%buttons-shared {
+
 }
 
 html {
@@ -203,7 +247,6 @@ header.hidden {
 }
 
 main {
-  padding: 5em 1.5em 4em 1.5em;
   background-color: $color-bg-bright;
 
   h1 {
@@ -255,7 +298,7 @@ main {
   }
 
   .section-quotes-container {
-    text-align: center;
+
     h3 {
       font-family: $font-secondary;
       font-size: 100%;
@@ -263,6 +306,7 @@ main {
     }
     article {
       margin: 0 1em;
+      display: flex;
     }
     p {
       margin: 0;
@@ -271,22 +315,7 @@ main {
       color: $color-accent-dull;
       margin-bottom: 5px;
     }
-    button {
-      font-family: $font-primary;
-      font-weight: bold;
-      font-size: 24px;
-      padding: 30px 40px 40px 40px;
-      max-height: 40px;
-      text-align: center;
-      background-color: transparent;
-      border: none;
-      overflow: hidden;
-    }
     
-    button:hover {
-      cursor: pointer;
-    }
-
     .section-quotes-bottom {
       display: flex;
       justify-content: center;
@@ -294,31 +323,48 @@ main {
         max-width: 60%;
       }
     }
-
+    
     .section-quotes-person {
       margin: 0 0.5em;
+      text-align: right;
     }
+    
+    
+  }
+  
+  button {
+    font-family: $font-primary;
+    font-weight: bold;
+    padding: 30px 40px 40px 40px;
+    font-size: 150%;
+    text-align: center;
+    background-color: transparent;
+    border: none;
+    margin: 0 10px;
+  }
+  
+  button:hover {
+    cursor: pointer;
+  }
+  
+  .quote-next::after {
+    content: ">";
+    position: absolute;
+    transition: all .3s ease-in;
+    margin-bottom: 10px;
+  }
+  .quote-next:hover::after {
+    transform: translate(10px,0);
+  }
 
-    #quote-next::after {
-      content: ">";
-      position: absolute;
-      transition: all .3s ease-in;
-      margin-bottom: 10px;
-    }
-    #quote-next:hover::after {
-      transform: translate(10px,0);
-    }
-
-    #quote-back::before {
-      content: "<";
-      position: absolute;
-      transition: all .3s ease-in;
-      margin-bottom: 10px;
-    }
-    #quote-back:hover::before {
-      transform: translate(-10px,0);
-    }
-
+  .quote-back::before {
+    content: "<";
+    position: absolute;
+    transition: all .3s ease-in;
+    margin-bottom: 10px;
+  }
+  .quote-back:hover::before {
+    transform: translate(-10px,0);
   }
   
 }
