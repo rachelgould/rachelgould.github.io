@@ -302,6 +302,10 @@ main .section-projects-container h3 {
   font-size: 1em;
 }
 
+main .section-work-exp-container div {
+  margin-bottom: 10px;
+}
+
 main .section-quotes-container h3 {
   font-family: "Quattrocento Sans", sans-serif;
   font-size: 100%;
@@ -354,6 +358,10 @@ main button {
 
 main button:hover {
   cursor: pointer;
+}
+
+main button:focus {
+  outline: 0;
 }
 
 main .quote-next::after {

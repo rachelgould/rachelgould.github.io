@@ -267,6 +267,10 @@ main {
     justify-content: space-around;
   }
 
+  h2 {
+    @extend %headings-shared;
+  }
+
   h2.job-title {
     font-size: 2em;
   }
@@ -274,10 +278,6 @@ main {
   h3 {
     font-size: 0.9em;
     margin-top: 0;
-  }
-
-  h2 {
-    @extend %headings-shared;
   }
 
   .section-skills_skills-container {
@@ -295,6 +295,10 @@ main {
 
   .section-work-exp-container {
     @extend %two-column-flex-shared;
+
+    div {
+      margin-bottom: 10px;
+    }
   }
 
   .section-quotes-container {
@@ -345,6 +349,10 @@ main {
   
   button:hover {
     cursor: pointer;
+  }
+
+  button:focus {
+    outline: 0;
   }
   
   .quote-next::after {
