@@ -119,8 +119,10 @@
         -ms-flex-direction: column;
             flex-direction: column;
   }
+  .section-projects-container a {
+    margin-bottom: 20px;
+  }
   .section-projects-container .tech-stack {
-    padding-top: 20px;
     margin-top: auto;
   }
   .section-work-exp-container div {
