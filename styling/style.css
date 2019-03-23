@@ -419,4 +419,8 @@ main .quote-back:hover::before {
   -webkit-transform: translate(-10px, 0);
           transform: translate(-10px, 0);
 }
+
+main #section-summary a {
+  color: #3D5A80;
+}
 /*# sourceMappingURL=style.css.map */

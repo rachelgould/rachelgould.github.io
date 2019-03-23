@@ -396,5 +396,9 @@ main {
   .quote-back:hover::before {
     transform: translate(-10px,0);
   }
+
+  #section-summary a {
+    color: $color-accent-dull;
+  }
   
 }
